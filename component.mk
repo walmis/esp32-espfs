@@ -24,6 +24,7 @@ else
 USE_GZIP_COMPRESSION := "no"
 endif
 
+
 IMAGE_PREREQ :=
 ifeq ("$(CONFIG_ESPFS_USE_MINIFY_TOOLS)","y")
 COMPONENT_EXTRA_CLEAN += $(IMAGEROOTDIR)/*
@@ -92,3 +93,5 @@ node_modules/.bin/uglifycss:
 
 node_modules/.bin/uglifyjs:
 	npm install --save-dev uglify-js
+
+build: libimage-espfs.a
